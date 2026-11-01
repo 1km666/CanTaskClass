@@ -43,8 +43,6 @@
 CRC_HandleTypeDef hcrc;
 
 /* USER CODE BEGIN PV */
-CAN_HandleTypeDef hcan1;
-CAN_HandleTypeDef hcan2;
 
 /* USER CODE END PV */
 
