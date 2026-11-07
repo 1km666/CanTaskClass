@@ -22,5 +22,8 @@ menu "Bsp config"
     config BSP_USE_USB
         bool "usb"
         default y
+    config BSP_USE_LED
+        bool "led"
+        default y
 
 endmenu

@@ -29,3 +29,7 @@
 #if BSP_USE_USB
 #include "Bsp_usb.hpp"
 #endif
+
+#if BSP_USE_LED
+#include "led.hpp"
+#endif

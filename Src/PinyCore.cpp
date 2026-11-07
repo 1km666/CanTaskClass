@@ -4,6 +4,7 @@
 #include "AppManager.hpp"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "led.hpp"
 
 #if SOC_USE_CUSTOM
 #include "Soc.hpp"
@@ -18,7 +19,12 @@ void PinyCore::bspInit()
     LOG::Logger::instance().init();
 
 #if BSP_USE_CAN
-    Can::instance().init();
+    if (Can::instance().init() != HAL_OK) {
+        Error_Handler();
+    }
+#endif
+#if BSP_USE_LED
+    Led::init();
 #endif
 }
 
